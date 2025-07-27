@@ -1,0 +1,312 @@
+<!DOCTYPE html>  
+<html lang="es"> <!-- idioma  -->
+<head>
+    <meta charset="UTF-8"> <!-- tildes  -->
+    <title> Tienda de ropa </title>  <!--  BOUTIQUE EL DIAMANTE -->
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f0f0;
+            margin: 600;
+        }
+        header {
+            background-image: url(https://th.bing.com/th/id/R.25d3db8194f41958f9300a4a60eaaad7?rik=MAZT5zpbklGkWQ&pid=ImgRaw&r=0);
+            background-size: cover;
+            background-position: center;
+            color: black;
+            padding: 400px 20px;
+            text-align: center; 
+        }
+        header h1 {
+            background-color: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .producto {
+            background-color: white;
+            width: 300px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .producto:hover {
+            transform: scale(1.03);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #333;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+        .boton-compra {
+            background-color: #27ae60;
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .boton-compra:hover {
+            background-color: #219150;
+        }
+        .contacto {
+            text-align: center;
+            padding: 20px;
+            background-color: #ecf0f1;
+        }
+        .contacto a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .contacto a:hover {
+            color: #2980b9;
+        }
+
+        /* Estilos para ventana emergente */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        .popup-contenido {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 400px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            animation: entrada 0.5s ease;
+        }
+        .popup-contenido img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        .popup-contenido h2 {
+            margin: 0 0 10px 0;
+        }
+        .cerrar {
+            margin-top: 15px;
+            padding: 8px 20px;
+            background-color: #27ae60;
+            color: pink;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @keyframes entrada {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>TIENDA DE ROPA EL DIAMANTE</h1>
+</header>
+
+<section class="contenedor">
+
+    <div class="producto">
+        <img src="C:\Users\estef\OneDrive\Escritorio\abrigo.jpg" alt="abrigos">
+        <h2>Abrigo</h2>
+        <p><strong>Q500</strong></p>
+        <p>para el invierno 3 colores tallas S,M disponible </p>
+        <button class="boton-compra" onclick="mostrarPopup('Zara')">Comprar</button>
+    </div>
+
+
+    <div class="producto">
+        <img src="C:\Users\estef\OneDrive\Escritorio\PANTALON.jpeg" alt="pantalon">
+        <h2>PANTALON</h2>
+        <p><strong>Q420</strong></p>
+        <p>casual color negro para cualquier evento tallas disponibles M</p>
+        <button class="boton-compra" onclick="mostrarPopup('louis vuitton')">Comprar</button>
+    </div>
+	
+	<div class="producto">
+        <img src="C:\Users\estef\OneDrive\Escritorio\manga larga.jpg" alt="Chanell">
+        <h2>Vestido </h2>
+        <p><strong>Q5,200</strong></p>
+        <p>Vestido de noche color vino tallas S, M</p>
+        <button class="boton-compra" onclick="mostrarPopup('Lenovo IdeaPad 3')">Comprar</button>
+    </div>
+	
+	  <div class="producto">
+        <img src="C:\Users\estef\OneDrive\Escritorio\ropa\black-women-pu-jacket19087897956.webp" alt="chaquetas">
+        <h2>Chaqueta</h2>
+        <p><strong>Q200</strong></p>
+        <p>Chaqueta de cuero color negro talla s</p>
+        <button class="boton-compra" onclick="mostrarPopup('marca alo')">Comprar</button>
+    </div>
+	
+	
+    <div class="producto">
+        <img src="C:\Users\estef\OneDrive\Escritorio\ropa\OIP.webp" alt="blusas">
+        <h2>BLUSA</h2>
+        <p><strong>Q400.00</strong></p>
+        <p>BLUSA COLOR ROSA TALLA NO.15</p>
+        <button class="boton-compra" onclick="mostrarPopup('louis vuitton')">Comprar</button>
+    </div>
+
+	
+	<div class="producto">
+        <img src="C:\Users\estef\OneDrive\Escritorio\ropa\NO 12.jpeg" alt="MARCA CHANNEL">
+        <h2>BLUSA BLANCA</h2>
+        <p><strong>Q550.00</strong></p>
+        <p>BLUSA MANGA LARGA CON CUELLO V TALLAS NO.14 </p>
+        <button class="boton-compra" onclick="mostrarPopup('CHANELL')">Comprar</button>
+    </div>
+	
+	<div class="producto">
+        <img src="C:\Users\estef\OneDrive\Escritorio\ropa\VERDE.webp" alt="blusas">
+        <h2>BLUSA</h2>
+        <p><strong>Q150.00</strong></p>
+        <p>BLUSA COLOR VERDE MUZGO TALLAS NO.16 DISPONIBLES </p>
+        <button class="boton-compra" onclick="mostrarPopup('Zara')">Comprar</button>
+    </div>
+
+
+    <div class="producto">
+        <img src= "C:\Users\estef\OneDrive\Escritorio\ropa\17097928683dadae2c4fb34865fc350f5566707062_wk_shein_thumbnail_900x.webp" alt="VESTIDOS">
+        <h2>VESTIDO</h2>
+        <p><strong>Q700.00</strong></p>
+        <p>VESTIDO WEAR CON TIRANTES COLOR NEGRO TALLAS NO. 15,16 Y 17.</p>
+        <button class="boton-compra" onclick="mostrarPopup('louis vuitton')">Comprar</button>
+    </div>
+	
+	<div class="producto">
+        <img src="C:\Users\estef\OneDrive\Escritorio\ropa\VESTIDO.webp" alt="Chanell">
+        <h2>Vestido </h2>
+        <p><strong>Q900.00</strong></p>
+        <p>VESTIDO DE NOCHE COLOR ROSA TALLAS DISPONIBLES NO. 13,14,15 Y 17 </p>
+        <button class="boton-compra" onclick="mostrarPopup('CHANELL')">Comprar</button>
+    </div>
+	
+	<div class="producto">
+        <img src="C:\Users\estef\OneDrive\Escritorio\ropa\CAFE.webp" alt="DIOR">
+        <h2>Vestido </h2>
+        <p><strong>Q.1,500.00</strong></p>
+        <p>VESTIDO COLOR CAFE DE MANGAS LARGAS Y CINTURA AJUSTABLE TALLAS DISPONIBLES XS,S</p>
+        <button class="boton-compra" onclick="mostrarPopup('MARCA DIOR')">Comprar</button>
+    </div>
+	
+<div class="producto">
+        <img src="C:\Users\estef\OneDrive\Escritorio\ropa\OIP (1).jpeg" alt="PANTALON">
+        <h2>PANTALON</h2>
+        <p><strong>Q200</strong></p>
+        <p>COLOR NEGRO DE CUERO TALLA S </p>
+        <button class="boton-compra" onclick="mostrarPopup('Zara')">Comprar</button>
+    </div>
+
+
+    <div class="producto">
+        <img src="C:\Users\estef\OneDrive\Escritorio\ropa\OIP (1).webp" alt="pantalon">
+        <p><strong>Q260.00</strong></p>
+        <p>DE LONA CLARITO TALLAS NO.16</p>
+        <button class="boton-compra" onclick="mostrarPopup('louis vuitton')">Comprar</button>
+    </div>
+
+ <div class="producto">
+        <img src="C:\Users\estef\OneDrive\Escritorio\ropa\OIP (2).webp" alt="CONJUNTO">
+        <h2>CONJUNTO</h2>
+        <p><strong>Q.720.00</strong></p>
+        <p>COLOR GRIS PALIDO</p>
+        <button class="boton-compra" onclick="mostrarPopup('CHANELL')">Comprar</button>
+    </div>
+ <div class="producto">
+        <img src="C:\Users\estef\OneDrive\Escritorio\ropa\OIP.jpeg" alt="pantalon">
+        <h2>PANTALON ROTO</h2>
+        <p><strong>Q.320.00 C/U</strong></p>
+        <p>CASUAL IDEAL PARA PASEOS TALLAS DIOSPONIBLES S,M.</p>
+        <button class="boton-compra" onclick="mostrarPopup('louis vuitton')">Comprar</button>
+    </div>
+ <div class="producto">
+        <img src="C:\Users\estef\OneDrive\Escritorio\ropa\vestidos-de-invitada-de-shein_137ea000_230214142635_1000x1500.jpg" alt="VESTIDOS">
+        <h2>VESTIDOS</h2>
+        <p><strong>Q150.00</strong></p>
+        <p>VESTIDO DE GALA COLOR PALO ROSA TALLAS XS,S</p>
+        <button class="boton-compra" onclick="mostrarPopup('louis vuitton')">Comprar</button>
+    </div>
+ <div class="producto">
+        <img src="C:\Users\estef\OneDrive\Escritorio\ropa\OIP (3).webp" alt="Chaqueta">
+        <h2>CHAQUETA</h2>
+        <p><strong>Q600.00</strong></p>
+        <p>CHAQUETA COLOR BEIGE TALLAS S,XS,M</p>
+        <button class="boton-compra" onclick="mostrarPopup('louis vuitton')">Comprar</button>
+    </div>
+
+<div class="producto">
+        <img src="C:\Users\estef\OneDrive\Escritorio\ropa\OIP (4).webp"alt="blusas">
+        <h2>BLUSA</h2>
+        <p><strong>Q300.00</strong></p>
+        <p>BLUSA COLOR GRIS TALLAS NO.14,15. </p>
+        <button class="boton-compra" onclick="mostrarPopup('Zara')">Comprar</button>
+    </div>
+	
+	<div class="producto">
+        <img src="C:\Users\estef\OneDrive\Escritorio\ropa\60839942b_35_d_500.jpg" alt="SUDADERA">
+        <h2>SUDADERA</h2>
+        <p><strong>Q400.00</strong></p>
+        <p>SUDADERA ABIERTA COLOR VERDE TALLAS S,M </p>
+        <button class="boton-compra" onclick="mostrarPopup('Zara')">Comprar</button>
+    </div>
+</section>
+
+<div class="contacto">
+    <h3>Contáctanos</h3>
+    <a href="https://wa.me/50245463496" target="_blank">📱 WhatsApp</a>
+    <a href="mailto:ventas@domotronic.com">📧 Correo</a>
+    <a href="tel:+50245463496">📞 Llamada</a>
+</div>
+
+
+<div class="popup" id="popup">
+    <div class="popup-contenido">
+        <img src=(https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.dreamstime.com%2Fillustration%2Fsnoopy.html&psig=AOvVaw0c_zT7WNum2yAbjuxioR1y&ust=1753680868851000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCLCNmrqo3I4DFQAAAAAdAAAAABAJ) alt="Éxito">
+        <h2>¡Compra realizada!</h2>
+        <p id="mensajeProducto"></p>
+        <button class="cerrar" onclick="cerrarPopup()">Aceptar</button>
+    </div>
+</div>
+
+<script>
+    function mostrarPopup(producto) {
+        document.getElementById("mensajeProducto").innerText = "Has comprado: " + producto + ". Te contactaremos pronto.";
+        document.getElementById("popup").style.display = "flex";
+    }
+
+    function cerrarPopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
